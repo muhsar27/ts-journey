@@ -1,5 +1,34 @@
-function findMax(numbers){
-    arguments.length
+function findMax(numbers) {
+  let max = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+  return max;
 }
-findMin(numbers)
-findAverage(numbers)
+function findMin(numbers) {
+  let min = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < min) {
+      min = numbers[i];
+    }
+  }
+  return min;
+}
+
+function findAverage(numbers) {
+  let avg,
+    sum = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  avg = sum / numbers.length;
+  return avg;
+}
+
+const nums = [12, 5, 88, 3, 45, 88, -7];
+console.log(findMax(nums)); // 88
+console.log(findMin(nums)); // -7
+console.log(findAverage(nums));
